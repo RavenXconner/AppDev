@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: block;
+            color: white;
+        }
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header-content ul li {
+            padding: 5px 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ff6347;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 0 auto 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #ccc;
+        }
+        .page-content {
+            flex: 1;
+            padding: 0 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-top: 0;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        .section p {
+            font-size: 1rem;
+            color: #555;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="header-content">
+        <ul>
+            <li>I am About link and my href value is #about</li>
+            <li>I am Education link and my href value is #education</li>
+            <li>I am Skills link and my href value is #skills</li>
+            <li>I am Portfolio link and my href value is #portfolio</li>
+            <li>I am Contact link and my href value is #contact</li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <img src="rodillon.jpg" alt="Profile Image">
+    <div class="page-content">
+        <h1>Hello! I am a text with the largest heading</h1>
+        <div class="section" id="about">
+            <p>I am division with id equal to about</p>
+        </div>
+        <div class="section" id="education">
+            <p>I am division with id equal to education</p>
+        </div>
+        <div class="section" id="skills">
+            <p>I am division with id equal to skills</p>
+        </div>
+        <div class="section" id="portfolio">
+            <p>I am division with id equal to portfolio</p>
+        </div>
+        <div class="section" id="contact">
+            <p>I am division with id equal to contact</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>I am a footer, the last section of this page</p>
+</footer>
+
+</body>
+</html>
