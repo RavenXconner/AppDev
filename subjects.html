@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects Taken</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .course-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .course-item {
+            background-color: #f8f9fa;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-item h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #2c3e50;
+        }
+
+        .course-item p {
+            margin: 5px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Subjects Taken</h1>
+    <ul class="course-list" id="course-list">
+    </ul>
+</div>
+
+<script>
+    const courses = [
+    {
+            "code": "IT111",
+            "description": "1st Year - 1st Semester",
+            "year_level": "1",
+            "sem": "1st",
+            "credit": "3"
+        },
+        {
+            "code": "IT112",
+            "description": "Computer Programing 1",
+            "year_level": "1",
+            "sem": "1st",
+            "credit": "3"
+        },
+        {
+            "code": "PurCom",
+            "description": "Purposive Communication",
+            "year_level": "1",
+            "sem": "1st",
+            "credit": "3"
+        },
+        {
+            "code": "RPH",
+            "description": "Readings in Philippine History",
+            "year_level": "1",
+            "sem": "1st",
+            "credit": "3"
+        },
+        {
+            "code": "TCW",
+            "description": "The Contemporary World",
+            "year_level": "1",
+            "sem": "1st",
+            "credit": "3"
+        }
+    ];
+
+    
+    function populateCourses() {
+        const courseList = document.getElementById('course-list');
+
+        courses.forEach(course => {
+            const courseItem = document.createElement('li');
+            courseItem.classList.add('course-item');
+
+            courseItem.innerHTML = `
+                <h3>${course.code} - ${course.description}</h3>
+                <p>Credit: ${course.credit}</p>
+                <p>Year Level: ${course.year_level}, ${course.sem} Semester</p>
+            `;
+
+            courseList.appendChild(courseItem);
+        });
+    }
+
+    populateCourses();
+</script>
+
+</body>
+</html>
