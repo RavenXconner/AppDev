@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javy Rodillon's Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: #eef2f3;
+        color: #333;
+        text-align: center;
+        padding: 20px;
+      }
+
+      header {
+        background-color: #222;
+        color: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      header ul {
+        list-style: none;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      header ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      header ul li a:hover {
+        color: #f4a261;
+      }
+
+      .image-section {
+        margin: 30px auto;
+      }
+
+      .image-section img {
+        width: 150px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .page-content {
+        margin: 30px auto;
+        width: 80%;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #222;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      div {
+        margin: 15px 0;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      ul {
+        text-align: center;
+        padding-left: 0;
+        list-style: none;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+        padding-left: 0;
+        position: relative;
+        display: inline-block;
+        text-align: left;
+        padding-left: 30px;
+      }
+
+      ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #f4a261;
+        font-size: 1.5rem;
+        top: 0;
+      }
+
+      footer {
+        margin-top: 20px;
+        padding: 15px;
+        background: #222;
+        color: white;
+        font-size: 14px;
+        border-top: 3px solid #f4a261;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h2>Welcome to My Portfolio</h2>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">My Work</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="#courses">Courses</a></li>
+      </ul>
+    </header>
+
+    <section class="image-section">
+      <img src="rodillon.jpg" alt="Profile Image" />
+      <p>Hello! I'm Javy</p>
+    </section>
+
+    <div class="page-content">
+      <h1>Javy Rodillon's Portfolio</h1>
+      <p>
+        Welcome to my personal space where I showcase my skills, experiences,
+        and projects as a full-stack developer.
+      </p>
+
+      <div id="about">
+        <h2>About Me</h2>
+        <p>
+          I'm passionate about coding and continuously improving my skills. I
+          enjoy building full-stack applications, exploring new technologies,
+          and solving complex problems.
+        </p>
+      </div>
+
+      <div id="education">
+        <h2>Education</h2>
+        <p>Self-taught programmer with a focus on full-stack development.</p>
+      </div>
+
+      <div id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>React, Node.js, Express</li>
+          <li>MySQL, PostgreSQL, MongoDB</li>
+          <li>Python, Java</li>
+        </ul>
+      </div>
+
+      <div id="portfolio">
+        <h2>My Work</h2>
+        <p>Here are some of my recent projects:</p>
+        <ul>
+          <li>Project 1 - Automated Hydroponic System</li>
+          <li>Project 2 - Full-Stack E-commerce Platform</li>
+          <li>Project 3 - 2-Wheeled Obstacle-Avoiding Robot</li>
+        </ul>
+      </div>
+
+      <div id="contact">
+        <h2>Contact Me</h2>
+        <p>Contact me at javyrodillon@gmail.com.</p>
+      </div>
+
+      <div id="courses">
+        <h2>My Finished Courses</h2>
+        <ul id="course-list">
+          <li>Loading courses...</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy;All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
