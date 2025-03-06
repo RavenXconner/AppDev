@@ -1,39 +1,39 @@
 {
-    "courses": [
-        {
-            "code": "IT111",
-            "description": "Introduction to Computing",
-            "year_level": "1",
-            "sem": "1st",
-            "credit": "3"
-        },
-        {
-            "code": "IT112",
-            "description": "Computer Programing 1",
-            "year_level": "1",
-            "sem": "1st",
-            "credit": "3"
-        },
-        {
-            "code": "PurCom",
-            "description": "Purposive Communication",
-            "year_level": "1",
-            "sem": "1st",
-            "credit": "3"
-        },
-        {
-            "code": "RPH",
-            "description": "Readings in Philippine History",
-            "year_level": "1",
-            "sem": "1st",
-            "credit": "3"
-        },
-        {
-            "code": "TCW",
-            "description": "The Contemporary World",
-            "year_level": "1",
-            "sem": "1st",
-            "credit": "3"
-        }
-    ]
+  "courses": [
+    {
+      "code": "IT111",
+      "description": "Introduction to Computing",
+      "year_level": "1",
+      "sem": "1st",
+      "credit": "3"
+    },
+    {
+      "code": "IT112",
+      "description": "Computer Programing 1",
+      "year_level": "1",
+      "sem": "1st",
+      "credit": "3"
+    },
+    {
+      "code": "PurCom",
+      "description": "Purposive Communication",
+      "year_level": "1",
+      "sem": "1st",
+      "credit": "3"
+    },
+    {
+      "code": "RPH",
+      "description": "Readings in Philippine History",
+      "year_level": "1",
+      "sem": "1st",
+      "credit": "3"
+    },
+    {
+      "code": "TCW",
+      "description": "The Contemporary World",
+      "year_level": "1",
+      "sem": "1st",
+      "credit": "3"
+    }
+  ]
 }
