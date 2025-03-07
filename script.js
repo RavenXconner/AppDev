@@ -1,39 +1,30 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const courseList = document.getElementById("course-list");
+function loadCourses() {
+  fetch('courses.json') 
+    .then(response => response.json()) 
+    .then(data => {
+      const courseList = document.getElementById('course-list'); 
+      courseList.innerHTML = ''; 
 
-  function loadCourses() {
-    fetch("courses.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch courses.");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        courseList.innerHTML = "";
-
-        if (data.courses.length === 0) {
-          courseList.innerHTML = "<li>No courses available.</li>";
-          return;
-        }
-
-        data.courses.forEach((course) => {
-          const listItem = document.createElement("li");
-          listItem.innerHTML = `
-                        <strong>${course.code}</strong>: 
-                        ${course.description} 
-                        (${course.year_level} Year, 
-                        ${course.sem} Semester, 
-                        ${course.credit} Credits)
-                    `;
-          courseList.appendChild(listItem);
-        });
-      })
-      .catch((error) => {
-        console.error(error);
-        courseList.innerHTML = "<li>Failed to load courses.</li>";
+      
+      data.courses.forEach(course => {
+        const row = document.createElement('tr'); 
+        row.innerHTML = `
+          <td>${course.code}</td>
+          <td>${course.description}</td>
+          <td>${course.year_level}</td>
+          <td>${course.sem}</td>
+          <td>${course.credit}</td>
+        `;
+        courseList.appendChild(row); 
       });
-  }
+    })
+    .catch(error => {
+      
+      const courseList = document.getElementById('course-list');
+      courseList.innerHTML = '<tr><td colspan="5">Failed to load courses.</td></tr>'; 
+      console.error('Error loading courses:', error);
+    });
+}
 
-  loadCourses();
-});
+
+document.addEventListener('DOMContentLoaded', loadCourses);

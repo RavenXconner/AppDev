@@ -80,28 +80,26 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
 
-      ul {
-        text-align: center;
-        padding-left: 0;
-        list-style: none;
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
       }
 
-      ul li {
-        margin-bottom: 10px;
-        padding-left: 0;
-        position: relative;
-        display: inline-block;
+      table th,
+      table td {
+        border: 1px solid #ddd;
+        padding: 10px;
         text-align: left;
-        padding-left: 30px;
       }
 
-      ul li::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: #f4a261;
-        font-size: 1.5rem;
-        top: 0;
+      table th {
+        background-color: #f4a261;
+        color: white;
+      }
+
+      table td {
+        background-color: #f9f9f9;
       }
 
       footer {
@@ -111,6 +109,18 @@
         color: white;
         font-size: 14px;
         border-top: 3px solid #f4a261;
+      }
+
+      ul {
+        list-style-type: disc;
+        margin: 20px auto;
+        max-width: 600px;
+        padding-left: 20px;
+        text-align: left;
+      }
+
+      ul li {
+        margin-bottom: 10px;
       }
     </style>
   </head>
@@ -181,14 +191,27 @@
 
       <div id="courses">
         <h2>My Finished Courses</h2>
-        <ul id="course-list">
-          <li>Loading courses...</li>
-        </ul>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Description</th>
+              <th>Year Level</th>
+              <th>Semester</th>
+              <th>Credit</th>
+            </tr>
+          </thead>
+          <tbody id="course-list">
+            <tr>
+              <td colspan="5">Loading courses...</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
     <footer>
-      <p>&copy;All rights reserved.</p>
+      <p>&copy; All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
