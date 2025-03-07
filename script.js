@@ -3,12 +3,11 @@ function loadCourses() {
     .then((response) => response.json())
     .then((data) => {
       const courseList = document.getElementById("course-list");
-      courseList.innerHTML = ""; // Clear the loading message
+      courseList.innerHTML = ""; 
 
-      // Store courses in a global variable for filtering
+     
       window.courses = data.courses;
 
-      // Populate the table with courses
       data.courses.forEach((course) => {
         const row = document.createElement("tr");
         row.innerHTML = `
@@ -29,7 +28,7 @@ function loadCourses() {
     });
 }
 
-// Function to filter courses based on search input
+
 function filterCourses() {
   const searchInput = document.getElementById("search-bar").value.toLowerCase();
   const courseList = document.getElementById("course-list");
@@ -39,16 +38,15 @@ function filterCourses() {
     const cells = rows[i].getElementsByTagName("td");
     let matchFound = false;
 
-    // Loop through all columns (Course Code, Description, Year Level, Semester, Credit)
+  
     for (let j = 0; j < cells.length; j++) {
       const cellText = cells[j].textContent.toLowerCase();
       if (cellText.includes(searchInput)) {
         matchFound = true;
-        break; // Stop checking other columns if a match is found
+        break; 
       }
     }
 
-    // Show or hide the row based on whether a match was found
     if (matchFound) {
       rows[i].style.display = "";
     } else {
@@ -57,5 +55,4 @@ function filterCourses() {
   }
 }
 
-// Load courses when the page loads
 document.addEventListener("DOMContentLoaded", loadCourses);
